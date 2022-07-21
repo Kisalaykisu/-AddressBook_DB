@@ -14,7 +14,7 @@ DESC addressbook;
 
 INSERT INTO addressbook 
 VALUES 
-('kisalay','srivastav','random_address','vizag','AP','530013','9346860516','madhukar@gmail.com'),
+('kisalay','srivastav','random_address','vizag','AP','530013','9346860516','kisalay@gmail.com'),
 ('saran','yallanki','random_address','vizag','AP','530032','9617726229','saran@gmail.com'),
 ('subham','verma','random_address','gorakhpur','UP','273001','7894560516','subham@gmail.com'),
 ('dinesh','bodepali','random_address','vizag','AP','530009','8332860516','madhukar@gmail.com'),
