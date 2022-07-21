@@ -1,0 +1,2 @@
+CREATE DATABASE addressbook_service;
+USE addressbook_service;
