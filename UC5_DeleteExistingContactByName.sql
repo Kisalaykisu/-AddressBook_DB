@@ -1,3 +1,4 @@
+#UC 5 Ability to delete a person using person's name
 CREATE DATABASE addressbook_service;
 USE addressbook_service;
 CREATE TABLE addressbook (
@@ -17,7 +18,7 @@ VALUES
 ('kisalay','srivastav','random_address','vizag','AP','530013','9346860516','kisalay@gmail.com'),
 ('saran','yallanki','random_address','vizag','AP','530032','9617726229','saran@gmail.com'),
 ('subham','verma','random_address','gorakhpur','UP','273001','7894560516','subham@gmail.com'),
-('dinesh','bodepali','random_address','vizag','AP','530009','8332860516','madhukar@gmail.com'),
+('dinesh','bodepali','random_address','vizag','AP','530009','8332860516','kisalay@gmail.com'),
 ('rafi','shaik','random_address','vizag','AP','530011','9982860516','rafi@gmail.com');
 
 SELECT * FROM addressbook WHERE firstName = 'kisalay'  AND lastName = 'srivastav';
