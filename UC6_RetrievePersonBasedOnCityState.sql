@@ -1,3 +1,6 @@
+#UC 6 Ability to Retrieve Person belonging to a City or State from the Address Book
+
+
 CREATE DATABASE addressbook_service;
 USE addressbook_service;
 CREATE TABLE addressbook (
