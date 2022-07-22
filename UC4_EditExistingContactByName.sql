@@ -24,4 +24,4 @@ VALUES
 
 SELECT * FROM addressbook WHERE firstName = 'kisalay'  AND lastName = 'srivastav';
 
-UPDATE addressbook SET city = 'bangalore' WHERE firstName = 'swatika' AND lastName = 'papu';
+UPDATE addressbook SET city = 'bangalore' WHERE firstName = 'kisalay' AND lastName = 'srivastav';
