@@ -1,2 +1,4 @@
+# UC1     Ability to create a Address Book Service DB
+
 CREATE DATABASE addressbook_service;
 USE addressbook_service;
