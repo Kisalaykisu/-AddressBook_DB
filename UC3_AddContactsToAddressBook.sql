@@ -1,3 +1,5 @@
+#UC 3 Ability to insert new Contacts to Address Book
+
 CREATE DATABASE addressbook_service;
 USE addressbook_service;
 CREATE TABLE addressbook (
