@@ -1,3 +1,5 @@
+#UC 5 Ability to delete a person using person's name
+
 CREATE DATABASE addressbook_service;
 USE addressbook_service;
 CREATE TABLE addressbook (
