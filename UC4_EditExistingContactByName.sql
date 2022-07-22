@@ -1,3 +1,5 @@
+#UC 4 Ability to edit existing contact person using their name
+
 CREATE DATABASE addressbook_service;
 USE addressbook_service;
 CREATE TABLE addressbook (
