@@ -155,10 +155,72 @@ mysql> SELECT * FROM addressbook ORDER BY firstName;
 #############################################################################################################################################################
 
 
-ALTER TABLE addressbook ADD type varchar(20) NOT NULL AFTER lastName;
-UPDATE addressbook SET type  = 'Friends' WHERE firstName = 'dinesh' OR firstname = 'rafi';
-UPDATE addressbook SET type  = 'Profession' WHERE firstName != 'dinesh' AND firstname != 'rafi' AND firstname != 'yashwant';
-UPDATE addressbook SET type  = 'Family' WHERE firstName = 'yashwant';
+mysql> ALTER TABLE addressbook ADD type varchar(20) NOT NULL AFTER lastName;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc addressbook;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| firstName | varchar(50)  | NO   |     | NULL    |       |
+| lastName  | varchar(50)  | NO   |     | NULL    |       |
+| type      | varchar(20)  | NO   |     | NULL    |       |
+| address   | varchar(100) | YES  |     | NULL    |       |
+| city      | varchar(20)  | YES  |     | NULL    |       |
+| state     | varchar(30)  | YES  |     | NULL    |       |
+| zip       | varchar(10)  | YES  |     | NULL    |       |
+| phoneNO   | varchar(20)  | YES  |     | NULL    |       |
+| email     | varchar(50)  | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+9 rows in set (0.00 sec)
+###################################################################################################################################################################
+mysql> UPDATE addressbook SET type  = 'Friends' WHERE firstName = 'dinesh' OR firstname = 'rafi';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressbook;
++-----------+-----------+---------+----------------+-----------+-------+--------+------------+-------------------+
+| firstName | lastName  | type    | address        | city      | state | zip    | phoneNO    | email             |
++-----------+-----------+---------+----------------+-----------+-------+--------+------------+-------------------+
+| kisalay   | srivastav |         | random_address | bangalore | AP    | 530013 | 9346860516 | kisalay@gmail.com |
+| saran     | yallanki  |         | random_address | vizag     | AP    | 530032 | 9617726229 | saran@gmail.com   |
+| subham    | verma     |         | random_address | gorakhpur | UP    | 273001 | 7894560516 | subham@gmail.com  |
+| rafi      | shaik     | Friends | random_address | vizag     | AP    | 530011 | 9982860516 | rafi@gmail.com    |
++-----------+-----------+---------+----------------+-----------+-------+--------+------------+-------------------+
+4 rows in set (0.00 sec)
+#######################################################################################################################################################################
+mysql> UPDATE addressbook SET type  = 'Profession' WHERE firstName != 'dinesh' AND firstname != 'rafi' AND firstname != 'yashwant';
+Query OK, 3 rows affected (0.01 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> select * from addressbook;
++-----------+-----------+------------+----------------+-----------+-------+--------+------------+-------------------+
+| firstName | lastName  | type       | address        | city      | state | zip    | phoneNO    | email             |
++-----------+-----------+------------+----------------+-----------+-------+--------+------------+-------------------+
+| kisalay   | srivastav | Profession | random_address | bangalore | AP    | 530013 | 9346860516 | kisalay@gmail.com |
+| saran     | yallanki  | Profession | random_address | vizag     | AP    | 530032 | 9617726229 | saran@gmail.com   |
+| subham    | verma     | Profession | random_address | gorakhpur | UP    | 273001 | 7894560516 | subham@gmail.com  |
+| rafi      | shaik     | Friends    | random_address | vizag     | AP    | 530011 | 9982860516 | rafi@gmail.com    |
++-----------+-----------+------------+----------------+-----------+-------+--------+------------+-------------------+
+4 rows in set (0.00 sec)
+#########################################################################################################################################################################
+mysql> UPDATE addressbook SET type  = 'Family' WHERE firstName = 'yashwant';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql> select * from addressbook;
++-----------+-----------+------------+----------------+-----------+-------+--------+------------+-------------------+
+| firstName | lastName  | type       | address        | city      | state | zip    | phoneNO    | email             |
++-----------+-----------+------------+----------------+-----------+-------+--------+------------+-------------------+
+| kisalay   | srivastav | Profession | random_address | bangalore | AP    | 530013 | 9346860516 | kisalay@gmail.com |
+| saran     | yallanki  | Profession | random_address | vizag     | AP    | 530032 | 9617726229 | saran@gmail.com   |
+| subham    | verma     | Profession | random_address | gorakhpur | UP    | 273001 | 7894560516 | subham@gmail.com  |
+| rafi      | shaik     | Friends    | random_address | vizag     | AP    | 530011 | 9982860516 | rafi@gmail.com    |
++-----------+-----------+------------+----------------+-----------+-------+--------+------------+-------------------+
+4 rows in set (0.00 sec)
+
+#######################################################################################################################################################################
 
 
 
