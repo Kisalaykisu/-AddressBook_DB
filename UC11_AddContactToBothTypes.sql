@@ -232,7 +232,24 @@ mysql> SELECT COUNT(firstName) AS contacts_count_by_type FROM addressbook WHERE 
 
 ####################################################################################################################################################################
 
-INSERT INTO addressbook 
-VALUES 
-('srikar','msk','Friends','random_address','vizag','AP','530013','7989260516','srikar@gmail.com'),
-('srikar','msk','Family','random_address','vizag','AP','530013','7989260516','srikar@gmail.com');
+mysql> INSERT INTO addressbook
+    -> VALUES
+    -> ('srikar','msk','Friends','random_address','vizag','AP','530013','7989260516','srikar@gmail.com'),
+    -> ('srikar','msk','Family','random_address','vizag','AP','530013','7989260516','srikar@gmail.com');
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from addressbook;
++-----------+-----------+------------+----------------+-----------+-------+--------+------------+-------------------+
+| firstName | lastName  | type       | address        | city      | state | zip    | phoneNO    | email             |
++-----------+-----------+------------+----------------+-----------+-------+--------+------------+-------------------+
+| kisalay   | srivastav | Profession | random_address | bangalore | AP    | 530013 | 9346860516 | kisalay@gmail.com |
+| saran     | yallanki  | Profession | random_address | vizag     | AP    | 530032 | 9617726229 | saran@gmail.com   |
+| subham    | verma     | Profession | random_address | gorakhpur | UP    | 273001 | 7894560516 | subham@gmail.com  |
+| rafi      | shaik     | Friends    | random_address | vizag     | AP    | 530011 | 9982860516 | rafi@gmail.com    |
+| srikar    | msk       | Friends    | random_address | vizag     | AP    | 530013 | 7989260516 | srikar@gmail.com  |
+| srikar    | msk       | Family     | random_address | vizag     | AP    | 530013 | 7989260516 | srikar@gmail.com  |
++-----------+-----------+------------+----------------+-----------+-------+--------+------------+-------------------+
+6 rows in set (0.00 sec)
+
+#########################################################################################################################################################################
