@@ -153,3 +153,12 @@ mysql> SELECT * FROM addressbook ORDER BY firstName;
 | subham    | verma     | random_address | gorakhpur | UP    | 273001 | 7894560516 | subham@gmail.com  |
 +-----------+-----------+----------------+-----------+-------+--------+------------+-------------------+
 #############################################################################################################################################################
+
+
+ALTER TABLE addressbook ADD type varchar(20) NOT NULL AFTER lastName;
+UPDATE addressbook SET type  = 'Friends' WHERE firstName = 'dinesh' OR firstname = 'rafi';
+UPDATE addressbook SET type  = 'Profession' WHERE firstName != 'dinesh' AND firstname != 'rafi' AND firstname != 'yashwant';
+UPDATE addressbook SET type  = 'Family' WHERE firstName = 'yashwant';
+
+
+
