@@ -222,4 +222,12 @@ mysql> select * from addressbook;
 
 #######################################################################################################################################################################
 
-SELECT COUNT(firstName) AS contacts_count_by_type FROM addressbook WHERE type = 'Profession';
+mysql> SELECT COUNT(firstName) AS contacts_count_by_type FROM addressbook WHERE type = 'Profession';
++------------------------+
+| contacts_count_by_type |
++------------------------+
+|                      3 |
++------------------------+
+1 row in set (0.00 sec)
+
+################################################################################################################################################################
