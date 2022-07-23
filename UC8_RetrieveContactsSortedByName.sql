@@ -20,7 +20,7 @@ VALUES
 ('dinesh','bodepali','random_address','vizag','AP','530009','8332860516','kisalay@gmail.com'),
 ('rafi','shaik','random_address','vizag','AP','530011','9982860516','rafi@gmail.com');
 
-SELECT * FROM addressbook WHERE firstName = 'kisalay'  AND lastName = 'tatiraju';
+SELECT * FROM addressbook WHERE firstName = 'kisalay'  AND lastName = 'srivastav';
 
 UPDATE addressbook SET city = 'bangalore' WHERE firstName = 'kisalay' AND lastName = 'srivastav';
 
