@@ -1,15 +1,65 @@
 #UC 2 Ability to create a Address Book Table with first and last names, address, city,
 
-CREATE DATABASE addressbook_service;
-USE addressbook_service;
-CREATE TABLE addressbook (
-	firstName varchar(50) NOT NULL,
-    lastName varchar(50) NOT NULL,
-    address varchar(100),
-    city varchar(20),
-    state varchar(30),
-    zip varchar(10),
-    phoneNO varchar(20),
-    email varchar(50)
-);
-DESC addressbook;
+###################################################################################################################################################################
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| payroll_service    |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.00 sec)
+
+##################################################################################################################################################################
+
+mysql> CREATE DATABASE addressbook_service;
+Query OK, 1 row affected (0.01 sec)
+
+###################################################################################################################################################################
+mysql> USE addressbook_service;
+Database changed
+
+###################################################################################################################################################################
+mysql> select database();
++---------------------+
+| database()          |
++---------------------+
+| addressbook_service |
++---------------------+
+1 row in set (0.00 sec)
+
+###################################################################################################################################################################
+mysql> CREATE TABLE addressbook (
+    -> firstName varchar(50) NOT NULL,
+    ->     lastName varchar(50) NOT NULL,
+    ->     address varchar(100),
+    ->     city varchar(20),
+    ->     state varchar(30),
+    ->     zip varchar(10),
+    ->     phoneNO varchar(20),
+    ->     email varchar(50)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+###################################################################################################################################################################
+mysql> DESC addressbook;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| firstName | varchar(50)  | NO   |     | NULL    |       |
+| lastName  | varchar(50)  | NO   |     | NULL    |       |
+| address   | varchar(100) | YES  |     | NULL    |       |
+| city      | varchar(20)  | YES  |     | NULL    |       |
+| state     | varchar(30)  | YES  |     | NULL    |       |
+| zip       | varchar(10)  | YES  |     | NULL    |       |
+| phoneNO   | varchar(20)  | YES  |     | NULL    |       |
+| email     | varchar(50)  | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+#################################################################################################################################################################
